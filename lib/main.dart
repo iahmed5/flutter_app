@@ -34,38 +34,42 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2.5),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.phone, color: Colors.teal),
-                    SizedBox(width: 10),
-                    Text('+44 74 1234 5678',
-                        style: TextStyle(
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20,
-                          color: Colors.teal[900],
-                        )),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(25),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.phone, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('+44 74 1234 5678',
+                          style: TextStyle(
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20,
+                            color: Colors.teal[900],
+                          )),
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.email, color: Colors.teal),
-                    SizedBox(width: 10),
-                    Text('iahmed@yahoo.com',
-                        style: TextStyle(
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20,
-                          color: Colors.teal[900],
-                        )),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(25),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.email, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('iahmed@yahoo.com',
+                          style: TextStyle(
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20,
+                            color: Colors.teal[900],
+                          )),
+                    ],
+                  ),
                 ),
               )
             ],
