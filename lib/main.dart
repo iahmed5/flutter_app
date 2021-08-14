@@ -5,24 +5,52 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int nDonuts = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      nDonuts++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          backgroundColor: Colors.blue,
-          appBar: AppBar(
-            title: Text('Welcome here'),
-            backgroundColor: Colors.blueGrey[900],
-          ),
-          body: Center(
-            child: Image(
-              // image: NetworkImage(
-              //     'https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/880/cached.offlinehbpl.hbpl.co.uk/news/OTM/Trojan-horse-shutterstock_225736225-muratart-20180228013519957.jpg'),
-              image: AssetImage('images/trojan.jpg'),
-            ),
-          )),
+        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          title: Text('Welcome here'),
+          backgroundColor: Colors.blueGrey[900],
+        ),
+        body: Center(
+          child: Text('No of donuts: $nDonuts'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.red,
+          child: Icon(Icons.add),
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+        ),
+      ),
     );
   }
 }
